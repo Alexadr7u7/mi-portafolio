@@ -13,7 +13,7 @@ export class ProjectsComponent {
       titulo: 'dvinternet',
       descripcion:
         'Sitio web informativo para una empresa de internet, desarrollado con HTML, CSS y PHP, con diseño responsivo y formulario de contacto funcional.',
-      imagen: '/assets/img/dvinternet.png',
+      imagen: 'assets/img/dvinternet.png',
       tecnologias: ['php', 'css', 'html', 'Mysql', 'Bootstrap'],
       fecha: '20 mayo 2022',
       demo: '#',
@@ -23,7 +23,7 @@ export class ProjectsComponent {
       titulo: 'dvinternet',
       descripcion:
         'Aplicación web desarrollada con php y mysql para gestionar clientes, servicios, pagos y reportes administrativos de la empresa.',
-      imagen: '/assets/img/dv-system.png',
+      imagen: 'assets/img/dv-system.png',
       tecnologias: ['php', 'css', 'html', 'mysql', 'Bootstrap'],
       fecha: '22 abril 2022',
       demo: '#',
