@@ -1,0 +1,18 @@
+.bg-purple {
+  background: #0c0814;
+}
+
+.card {
+  border-radius: 20px;
+}
+h2 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.text-purple {
+  font-size: 18px;
+  color: #7946e3;
+  font-weight: bold;
+}

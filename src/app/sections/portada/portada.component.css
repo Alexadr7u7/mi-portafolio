@@ -1,0 +1,148 @@
+.portada {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.row-portada {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content-portada {
+  flex: 1 1 50%;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.nombre {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.content-portada p {
+  font-size: 20px;
+  color: #7946e3;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.button-portada {
+  display: flex;
+  gap: 15px;
+}
+
+.button-portada .btn-primary {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button-portada .btn-primary i {
+  font-size: 24px;
+  padding-right: 10px;
+}
+.button-portada .btn-primary:hover {
+  background: transparent;
+  border: #7946e3;
+}
+
+.btn-primary:hover i {
+  color: #ffffff;
+}
+
+.btn-primary:hover span {
+  color: #ffffff;
+}
+.btn-primary span {
+  transition: 400ms;
+}
+
+.button-portada .btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #7946e3;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-outline span {
+  transition: 400ms;
+}
+
+.button-portada .btn-outline:hover {
+  background: #7946e3;
+}
+
+.image-portada {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.image-portada img {
+  max-width: 100%;
+  height: auto;
+}
+
+.typewriter {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 27ch;
+  animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.flecha-abajo {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.flecha-abajo:hover {
+  font-size: 33px;
+}
+/* animación tipo "bounce" */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}

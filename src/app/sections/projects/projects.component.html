@@ -1,0 +1,53 @@
+<div class="container-custom">
+  <h2 class="mb-4 card-title text-center">Proyectos</h2>
+
+  <div class="card bg-purple text-light shadow-lg p-4">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-6" *ngFor="let proyecto of proyectos">
+        <div class="d-flex flex-column gap-3 h-100">
+          <!-- Imagen arriba -->
+          <img
+            [src]="proyecto.imagen"
+            class="rounded shadow-sm w-100"
+            alt="{{ proyecto.titulo }}"
+            style="height: 210px"
+          />
+
+          <!-- Contenido con altura fija -->
+          <div
+            class="flex-grow-1 d-flex flex-column justify-content-between"
+            style="min-height: 220px"
+          >
+            <div>
+              <h3 class="text-purple">{{ proyecto.titulo }}</h3>
+              <p class="mb-2">{{ proyecto.descripcion }}</p>
+
+              <div class="mb-2">
+                <span
+                  *ngFor="let tech of proyecto.tecnologias"
+                  class="badge me-1 bg-secondary"
+                >
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Footer: fecha + enlaces -->
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <small class="text-muted">{{ proyecto.fecha }}</small>
+              <div>
+                <a [href]="proyecto.demo" target="_blank">
+                  <i class="fas fa-link me-2 text-light"></i>
+                </a>
+                <a [href]="proyecto.github" target="_blank">
+                  <i class="fab fa-github text-light"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="bg-secondary" />
+      </div>
+    </div>
+  </div>
+</div>

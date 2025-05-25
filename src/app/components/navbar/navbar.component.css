@@ -1,0 +1,69 @@
+/* Navbar */
+.navbar {
+  border-radius: 20px;
+  height: 80px;
+  align-content: center;
+  padding: 0;
+  z-index: 999;
+  top: 0; /* ¡Obligatorio! */
+  background: #0c0814;
+  margin-top: 20px;
+}
+/* Ajustar tamaño del logo */
+.navbar-brand img {
+  width: 180px; /* Reducir tamaño del logo */
+}
+
+.navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Línea animada debajo del texto */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 8px;
+  background-color: #7946e3;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+.nav-item {
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .top-bar .container-fluid {
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+  }
+  .px-100 {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0px;
+  }
+  .navbar-nav .nav-link::after {
+    width: 0;
+    height: 0px;
+    background-color: none;
+  }
+  .nav-item {
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+  }
+}

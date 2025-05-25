@@ -1,0 +1,20 @@
+h3 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.bg-purple {
+  background: #0c0814;
+}
+
+.card {
+  border-radius: 20px;
+}
