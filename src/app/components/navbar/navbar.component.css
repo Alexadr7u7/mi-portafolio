@@ -1,17 +1,29 @@
 /* Navbar */
 .navbar {
   border-radius: 20px;
-  height: 80px;
-  align-content: center;
-  padding: 0;
+  align-items: center;
   z-index: 999;
-  top: 0; /* ¡Obligatorio! */
-  background: #0c0814;
+  top: 0;
+  background: #0c0814e8;
   margin-top: 20px;
+  width: 100%;
 }
-/* Ajustar tamaño del logo */
+
+/* Ajuste del logo */
 .navbar-brand img {
-  width: 180px; /* Reducir tamaño del logo */
+  width: 150px;
+}
+
+/* Ícono hamburguesa */
+.navbar-toggler i {
+  font-size: 24px;
+  color: #ffffff;
+  border: none;
+}
+
+/* Ítem del menú */
+.nav-item {
+  padding: 10px;
 }
 
 .navbar-nav .nav-link {
@@ -20,16 +32,16 @@
   color: #ffffff;
   text-transform: uppercase;
   position: relative;
+  padding: 8px 12px;
 }
 
-/* Línea animada debajo del texto */
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
   width: 0;
-  height: 8px;
+  height: 3px;
   background-color: #7946e3;
   transition: width 0.3s;
 }
@@ -38,32 +50,90 @@
 .navbar-nav .nav-link.active::after {
   width: 100%;
 }
-.nav-item {
-  padding: 10px;
-}
-@media (max-width: 768px) {
-  .top-bar .container-fluid {
-    flex-direction: column;
-    text-align: left;
-    padding: 0;
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem;
+    border-radius: 10px;
   }
-  .px-100 {
-    padding: 20px;
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px;
+
+    /* Elimina la línea animada en móvil */
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none;
   }
 }
 
-@media (max-width: 991px) {
-  .navbar {
-    padding: 0px;
-  }
-  .navbar-nav .nav-link::after {
-    width: 0;
-    height: 0px;
-    background-color: none;
-  }
-  .nav-item {
-    align-items: center;
-    text-align: center;
-    padding: 0px;
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+  position: relative;
+  width: 70px; /* reducido */
+  height: 40px; /* reducido */
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 40px; /* reducido */
+  background-color: var(--dark);
+  border-radius: 15px; /* ajustado */
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px; /* ajustado */
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px; /* ajustado */
+  left: 5px; /* ajustado */
+  width: 25px; /* reducido */
+  height: 25px; /* reducido */
+  border-radius: 50%;
+  box-shadow: inset 10px -3px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(30px); /* ajustado para nuevo ancho */
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .toggle-switch {
+    width: 80px;
+    height: 40px;
+    padding-left: 10px;
   }
 }

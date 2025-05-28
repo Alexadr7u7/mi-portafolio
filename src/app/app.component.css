@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: rgb(0, 0, 0);
   overflow: hidden;
@@ -49,4 +49,9 @@
     transform: translate(800px, 800px) rotate(45deg);
     opacity: 0;
   }
+}
+
+.section-separator {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

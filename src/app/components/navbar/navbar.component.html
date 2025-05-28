@@ -1,37 +1,60 @@
-<nav
-  class="navbar navbar-expand-lg position-sticky container-custom"
-  data-aos="fade-down"
->
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-      <img src="assets/img/logo-alexander.png" alt="logo" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-center" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="/">INICIO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/servicios">SOBRE MI</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/nosotros">PROYECTOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contacto">CONTACTO</a>
-        </li>
-      </ul>
-    </div>
+<div class="sticky-top">
+  <div class="container-custom">
+    <nav class="navbar navbar-expand-lg" data-aos="fade-down">
+      <!-- Logo -->
+      <a class="navbar-brand" href="/">
+        <img src="assets/img/logo-alexander.png" alt="logo" />
+      </a>
+
+      <!-- 📱 SWITCH + HAMBURGUESA EN MÓVIL -->
+      <div class="d-flex d-lg-none align-items-center ms-auto">
+        <!-- Botón hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- Toggle visible solo en móvil -->
+        <div class="toggle-switch me-2">
+          <label class="switch-label">
+            <input type="checkbox" class="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Menú navegable -->
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNav"
+        #navbarCollapse
+      >
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" id="nav-home">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" id="nav-about">SOBRE MI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects" id="nav-projects">PROYECTOS</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 🖥 SWITCH EN DESKTOP -->
+      <div class="toggle-switch d-none d-lg-block ms-auto">
+        <label class="switch-label">
+          <input type="checkbox" class="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
   </div>
-</nav>
+</div>

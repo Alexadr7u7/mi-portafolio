@@ -2,13 +2,23 @@
 <div class="star-background"></div>
 
 <!-- 🧭 Navegación y contenido principal -->
-<app-navbar></app-navbar>
 <main>
-  <section id="portada"><app-portada></app-portada></section>
-  <section id="about"><app-about></app-about></section>
-  <section id="experiencia"><app-experiencia></app-experiencia></section>
-  <section id="skills"><app-skills></app-skills></section>
-  <section id="projects"><app-projects></app-projects></section>
-  <section id="contact"><app-contact></app-contact></section>
+  <app-navbar></app-navbar>
+  <section id="portada"><app-portada id="home"></app-portada></section>
+  <section id="about" class="section-separator">
+    <app-about id="about"></app-about>
+  </section>
+  <section id="experiencia" class="section-separator">
+    <app-experiencia></app-experiencia>
+  </section>
+  <section id="skills" class="section-separator">
+    <app-skills></app-skills>
+  </section>
+  <section id="projects" class="section-separator">
+    <app-projects id="projects"></app-projects>
+  </section>
+  <section id="formacion" class="section-separator">
+    <app-formacion></app-formacion>
+  </section>
+  <section class="section-separator"><app-footer></app-footer></section>
 </main>
-<app-footer></app-footer>

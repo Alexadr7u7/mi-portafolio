@@ -1,9 +1,13 @@
 <div class="container-custom">
-  <h2 class="mb-4 card-title text-center">Proyectos</h2>
+  <h2 class="mb-4 card-title text-center" data-aos="fade-right">Proyectos</h2>
 
-  <div class="card bg-purple text-light shadow-lg p-4">
+  <div class="card bg-purple text-light shadow-lg p-4" data-aos="fade-right">
     <div class="row g-4">
-      <div class="col-md-6 col-lg-6" *ngFor="let proyecto of proyectos">
+      <div
+        class="col-md-6 col-lg-6 mt-5 mb-3"
+        *ngFor="let proyecto of proyectos"
+        data-aos="fade-up"
+      >
         <div class="d-flex flex-column gap-3 h-100">
           <img
             [src]="proyecto.imagen"
@@ -32,15 +36,15 @@
 
             <!-- Footer: fecha + enlaces -->
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <small class="text-muted">{{ proyecto.fecha }}</small>
-              <div>
+              <small class="text-white">{{ proyecto.fecha }}</small>
+              <!-- <div>
                 <a [href]="proyecto.demo" target="_blank">
                   <i class="fas fa-link me-2 text-light"></i>
                 </a>
                 <a [href]="proyecto.github" target="_blank">
                   <i class="fab fa-github text-light"></i>
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -48,4 +52,15 @@
       </div>
     </div>
   </div>
+  <!-- <div
+    class="text-center mt-4 align-items-center d-flex justify-content-center"
+    data-aos="zoom-out-right"
+  >
+    <button
+      class="btn btn-primary d-flex align-items-center justify-content-center"
+    >
+      <span>Ver más</span>
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div> -->
 </div>

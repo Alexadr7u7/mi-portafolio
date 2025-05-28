@@ -18,3 +18,7 @@ h2 {
 .card {
   border-radius: 20px;
 }
+
+img {
+  max-width: 100%;
+}

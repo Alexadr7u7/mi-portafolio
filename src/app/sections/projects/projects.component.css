@@ -16,3 +16,35 @@ h2 {
   color: #7946e3;
   font-weight: bold;
 }
+.btn-primary {
+  background-color: #0c0814;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-primary i {
+  font-size: 12px;
+  padding-left: 10px;
+}
+.btn-primary:hover {
+  background: #ffffff;
+  border: #0c0814;
+  color: #000000;
+}
+
+.btn-primary:hover i {
+  color: #000000;
+}
+
+.btn-primary:hover span {
+  color: #000000;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
